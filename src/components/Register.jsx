@@ -8,7 +8,8 @@ export default function Register() {
   const [error, setError] = useState("");
   const handlesubmit = async() => {
     try {
-      const url = "http://localhost:8080/api/users/register";
+      const url = "https://mern-summer-project-git-main-ps524569-gmailcoms-projects.vercel.app/api/users/register";  //live connect from vercel
+      // const url = "http://localhost:8080/api/users/register";   
       const result= await axios.post(url,user);
 
       setError("Data saved successfully")
