@@ -52,30 +52,61 @@
 // }
 
 
-import { useState } from "react"
-export default function Home(){
-    const [score, setScore] = useState(0);
-    const [wicket, setWicket] = useState(0);
-    const [message,setMessage]= useState("");
+// import { useState } from "react"
+// export default function Home(){
+//     const [score, setScore] = useState(0);
+//     const [wicket, setWicket] = useState(0);
+//     const [message,setMessage]= useState("");
 
-    const increment = () =>{
-        setScore(score+1);
-    }
-    const incrementwicket = () =>{
-        setWicket(wicket+1);
-        setMessage("Well done!");
-    }
+//     const increment = () =>{
+//         setScore(score+1);
+//     }
+//     const incrementwicket = () =>{
+//         setWicket(wicket+1);
+//         setMessage("Well done!");
+//     }
 
-    return(
-        <>
-            <p>{score}</p>
-            <button onClick={increment}>Increment Score</button>
+//     return(
+//         <>
+//             <p>{score}</p>
+//             <button onClick={increment}>Increment Score</button>
 
 
-            <p>{wicket}</p>
-            <button onClick={incrementwicket}>Increment wicket</button>
+//             <p>{wicket}</p>
+//             <button onClick={incrementwicket}>Increment wicket</button>
 
-            <p>{message}</p>
-        </>
-    )
+//             <p>{message}</p>
+//         </>
+//     )
+// }
+
+
+import React from "react";
+
+export default function Form() {
+  return (
+    <form>
+      <div>
+        <label>First Name:</label>
+        <input type="text" placeholder="Enter first name" />
+      </div>
+
+      <div>
+        <label>Last Name:</label>
+        <input type="text" placeholder="Enter last name" />
+      </div>
+
+      <div>
+        <label>Email:</label>
+        <input type="email" placeholder="Enter email" />
+      </div>
+
+      <div>
+        <label>Password:</label>
+        <input type="password" placeholder="Enter password" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
