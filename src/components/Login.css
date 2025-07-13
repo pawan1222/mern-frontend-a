@@ -1,6 +1,6 @@
-/* src/components/Register.css */
+/* src/components/Login.css */
 
-.register-container {
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,26 +8,26 @@
   background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
 }
 
-.register-card {
+.login-card {
   background: #fff;
   padding: 40px 30px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
 }
 
-.register-card h2 {
+.login-card h2 {
   margin-bottom: 20px;
   color: #333;
   text-align: center;
 }
 
-.register-card p {
+.login-card p {
   margin: 10px 0;
 }
 
-.register-card input {
+.login-card input {
   width: 100%;
   padding: 12px 15px;
   margin-top: 5px;
@@ -36,12 +36,12 @@
   font-size: 16px;
 }
 
-.register-card input:focus {
+.login-card input:focus {
   border-color: #007bff;
   outline: none;
 }
 
-.register-card button {
+.login-card button {
   width: 100%;
   padding: 12px 0;
   margin-top: 20px;
@@ -54,11 +54,11 @@
   transition: background 0.3s ease;
 }
 
-.register-card button:hover {
+.login-card button:hover {
   background: #0056b3;
 }
 
-.register-card a {
+.login-card a {
   display: block;
   text-align: center;
   margin-top: 15px;
@@ -66,11 +66,11 @@
   text-decoration: none;
 }
 
-.register-card a:hover {
+.login-card a:hover {
   text-decoration: underline;
 }
 
-.register-card .error-message {
+.login-card .error-message {
   text-align: center;
   color: #e63946;
   font-weight: 500;

@@ -20,43 +20,45 @@ export default function Register() {
     }
   };
   return (
-    <div className="App-Register-Row">
-      <div style={{ backgroundColor: "white" }}>
-        <h2>Registration Form</h2>
-        {error}
-        <p>
-          <input
-            type="text"
-            onChange={(e) => setUser({ ...user, firstName: e.target.value })}
-            placeholder="Enter First Name"
-          />
-        </p>
-        <p>
-          <input
-            type="text"
-            placeholder="Enter Last Name"
-            onChange={(e) => setUser({ ...user, lastName: e.target.value })}
-          />
-        </p>
-        <p>
-          <input
-            type="text"
-            placeholder="Enter Email Address"
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
-          />
-        </p>
-        <p>
-          <input
-            type="password"
-            placeholder="Enter Password"
-            onChange={(e) => setUser({ ...user, password: e.target.value })}
-          />
-        </p>
-        <p>
-          <button onClick={handleSubmit}>Submit</button>
-        </p>
-        <hr />
-      <Link to="/login">Already a member? Login Here...</Link>
+    <div className="register-container">
+      <div className="register-card">
+        <div style={{ backgroundColor: "white" }}>
+          <h2>Registration Form</h2>
+          {error}
+          <p>
+            <input
+              type="text"
+              onChange={(e) => setUser({ ...user, firstName: e.target.value })}
+              placeholder="Enter First Name"
+            />
+          </p>
+          <p>
+            <input
+              type="text"
+              placeholder="Enter Last Name"
+              onChange={(e) => setUser({ ...user, lastName: e.target.value })}
+            />
+          </p>
+          <p>
+            <input
+              type="text"
+              placeholder="Enter Email Address"
+              onChange={(e) => setUser({ ...user, email: e.target.value })}
+            />
+          </p>
+          <p>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              onChange={(e) => setUser({ ...user, password: e.target.value })}
+            />
+          </p>
+          <p>
+            <button onClick={handleSubmit}>Submit</button>
+          </p>
+          <hr />
+        <Link to="/login">Already a member? Login Here...</Link>
+        </div>
       </div>
     </div>
   );

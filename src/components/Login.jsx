@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import "./Login.css";
+
 export default function Login() {
   const [user, setUser] = useState({});
   const [error, setError] = useState();
@@ -17,28 +19,30 @@ export default function Login() {
     }
   };
   return (
-    <div>
-      <h2>Login</h2>
-      {error}
-      <p>
-        <input
-          type="text"
-          placeholder="Email Address"
-          onChange={(e) => setUser({ ...user, email: e.target.value })}
-        />
-      </p>
-      <p>
-        <input
-          type="password"
-          placeholder="Password"
-          onChange={(e) => setUser({ ...user, password: e.target.value })}
-        />
-      </p>
-      <p>
-        <button onClick={handleSubmit}>Submit</button>
-      </p>
-      <hr />
-      <Link to="/register">Create Account</Link>
+    <div className="login-container">
+      <div className="login-card">
+        <h2>Login</h2>
+        {error}
+        <p>
+          <input
+            type="text"
+            placeholder="Email Address"
+            onChange={(e) => setUser({ ...user, email: e.target.value })}
+          />
+        </p>
+        <p>
+          <input
+            type="password"
+            placeholder="Password"
+            onChange={(e) => setUser({ ...user, password: e.target.value })}
+          />
+        </p>
+        <p>
+          <button onClick={handleSubmit}>Submit</button>
+        </p>
+        <hr />
+        <Link to="/register">Create Account</Link>
+      </div>
     </div>
   );
 }
