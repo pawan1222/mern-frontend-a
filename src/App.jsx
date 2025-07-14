@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import Navbar from "./components/Navbar";
 import Register from "./components/Register";
 import Product from "./components/Product";
 import Cart from "./components/Cart";
@@ -14,12 +12,9 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 function App() {
   return (
-    <div className="App-Container">
+     <div className="App-Container">
       <BrowserRouter>
-        <h1 style={{ backgroundColor: "orange" }}>MERN Frontend</h1>
-        <Link to="/">Home</Link>-<Link to="/cart">MyCart</Link>-
-        <Link to="/order">MyOrder</Link>-<Link to="/admin">Admin</Link>-
-        <Link to="/login">Login</Link>
+        <Navbar />
         <Routes>
           <Route index element={<Product />} />
           <Route path="login" element={<Login />} />
@@ -32,7 +27,9 @@ function App() {
             <Route path="orders" element={<Orders />} />
           </Route>
         </Routes>
-        <h3>This is footer</h3>
+        <footer style={{ textAlign: "center", padding: "20px 0" }}>
+          <h3>This is footer</h3>
+        </footer>
       </BrowserRouter>
     </div>
   );

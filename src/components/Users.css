@@ -1,0 +1,143 @@
+
+/* Page container */
+.Users-Container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.Users-Container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form styling */
+.Users-Form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.Users-Form input,
+.Users-Form select {
+  flex: 1 1 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Users-Form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Users-Form button:hover {
+  background-color: #0056b3;
+}
+
+/* Search section */
+.Users-Search {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.Users-Search input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.Users-Search button {
+  padding: 8px 20px;
+  background-color: #28a745;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Users-Search button:hover {
+  background-color: #1e7e34;
+}
+
+/* Table styling */
+.Users-Table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Users-Table th,
+.Users-Table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.Users-Table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.Users-Table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.Users-Table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.Users-Table button {
+  padding: 6px 12px;
+  margin-right: 5px;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Users-Table button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.Users-Table button:hover {
+  opacity: 0.9;
+}
+
+/* Pagination */
+.Users-Pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.Users-Pagination button {
+  padding: 8px 16px;
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Users-Pagination button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.Users-Pagination button:hover:not(:disabled) {
+  background-color: #23272b;
+}
