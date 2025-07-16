@@ -1,0 +1,51 @@
+/* src/styles/Order.css */
+
+.orders-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.orders-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.orders-error {
+  text-align: center;
+  color: #e63946;
+  margin-bottom: 20px;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.order-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+}
+
+.order-card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.orders-empty {
+  text-align: center;
+  color: #555;
+  font-size: 18px;
+}

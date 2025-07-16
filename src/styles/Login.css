@@ -1,0 +1,89 @@
+/* styles/Login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f5f5;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"],
+.login-container button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 12px 15px;
+  margin: 10px 0 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.login-container input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-container button {
+  padding: 12px 15px; /* same left/right padding as input */
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-container button:hover {
+  background: #0056b3;
+}
+
+.login-container hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 2rem 0;
+}
+
+.login-container a {
+  color: #007bff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #c00;
+  margin-bottom: 1rem;
+  background: #ffe5e5;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+}

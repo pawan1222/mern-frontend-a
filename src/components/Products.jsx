@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Products.css";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import axios from "axios";

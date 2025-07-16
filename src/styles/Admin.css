@@ -1,0 +1,32 @@
+/* src/styles/Admin.css */
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-nav {
+  margin-bottom: 30px;
+}
+
+.admin-nav a {
+  margin-right: 25px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.admin-nav a:hover {
+  color: #0056b3;
+}
+
+.admin-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}

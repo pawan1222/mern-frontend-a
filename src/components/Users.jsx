@@ -1,4 +1,4 @@
-import "./Users.css";
+import "../styles/Users.css";
 import React from "react";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
