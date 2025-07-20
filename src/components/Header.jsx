@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container">
-        <h1 className="logo">MERN Shop</h1>
+        <h1 className="logo">TastyBasket</h1>
         <nav className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/cart">My Cart</Link>
