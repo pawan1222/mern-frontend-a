@@ -1,0 +1,79 @@
+/* Orders.css */
+
+.orders-admin-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+}
+
+.orders-admin-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #222;
+}
+
+.orders-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.orders-filter input {
+  padding: 0.5rem 1rem;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.orders-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fafafa;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+  color: #444;
+  font-weight: 600;
+}
+
+.orders-table td select {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.orders-pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.orders-pagination button {
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.orders-pagination button.active,
+.orders-pagination button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
