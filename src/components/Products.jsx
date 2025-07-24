@@ -52,38 +52,37 @@ export default function Products() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-
   const handleAdd = async (e) => {
-  e.preventDefault();
-  const frm = frmRef.current;
-  if (!frm.checkValidity()) {
-    frm.reportValidity();
-    return;
-  }
+    e.preventDefault();
+    const frm = frmRef.current;
+    if (!frm.checkValidity()) {
+      frm.reportValidity();
+      return;
+    }
 
-  try {
-    const formData = new FormData();
+    try {
+      const formData = new FormData();
 
-    formData.append("productName", form.productName);
-    formData.append("price", form.price);
-    formData.append("description", form.description);
-    formData.append("image", form.image);
+      formData.append("productName", form.productName);
+      formData.append("price", form.price);
+      formData.append("description", form.description);
+      formData.append("image", form.image);
 
-    const url = `${API_URL}/api/products`;
-    const result = await axios.post(url, formData, {
-      headers: {
-        "Content-Type": "multipart/form-data"
-      }
-    });
+      const url = `${API_URL}/api/products`;
+      const result = await axios.post(url, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
-    setError("Product added successfully");
-    fetchProducts();
-    resetForm();
-  } catch (err) {
-    console.log(err);
-    setError("Something went wrong");
-  }
-};
+      setError("Product added successfully");
+      fetchProducts();
+      resetForm();
+    } catch (err) {
+      console.log(err);
+      setError("Something went wrong");
+    }
+  };
 
   const handleEdit = (product) => {
     setEditId(product._id);
@@ -160,14 +159,15 @@ export default function Products() {
             onChange={handleChange}
             required
           />
-          <input
-            name="image"
-            type="file"
-            accept="image/*"
-            onChange={(e)=> setForm({...form, image: e.target.files[0]})}
-            required
-          />
-
+          {!editId && (
+            <input
+              name="image"
+              type="file"
+              accept="image/*"
+              onChange={(e) => setForm({ ...form, image: e.target.files[0] })}
+              required
+            />
+          )}
 
           {editId ? (
             <>
@@ -190,7 +190,7 @@ export default function Products() {
               <th>Product Name</th>
               <th>Description</th>
               <th>Price</th>
-              <th>Image Url</th>
+              {/* <th>Image Url</th> */}
               <th>Action</th>
             </tr>
           </thead>
@@ -200,7 +200,7 @@ export default function Products() {
                 <td>{value.productName}</td>
                 <td>{value.description}</td>
                 <td>{value.price}</td>
-                <td>{value.imgUrl}</td>
+                {/* <td>{value.imgUrl}</td> */}
                 <td>
                   <button onClick={() => handleEdit(value)}>Edit</button>
                   <button onClick={() => handleDelete(value._id)}>
