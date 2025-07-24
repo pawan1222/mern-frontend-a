@@ -11,7 +11,7 @@ export default function Products() {
     productName: "",
     description: "",
     price: "",
-    imgUrl: "",
+    imgUrl: null,
   });
   const [page, setPage] = useState(1);
   const [searchVal, setSearchVal] = useState("");
@@ -52,24 +52,38 @@ export default function Products() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+
   const handleAdd = async (e) => {
-    e.preventDefault();
-    const frm = frmRef.current;
-    if (!frm.checkValidity()) {
-      frm.reportValidity();
-      return;
-    }
-    try {
-      const url = `${API_URL}/api/products`;
-      const result = await axios.post(url, form);
-      setError("User added succesfully");
-      fetchProducts();
-      resetForm();
-    } catch (err) {
-      console.log(err);
-      setError("Something went wrong");
-    }
-  };
+  e.preventDefault();
+  const frm = frmRef.current;
+  if (!frm.checkValidity()) {
+    frm.reportValidity();
+    return;
+  }
+
+  try {
+    const formData = new FormData();
+
+    formData.append("productName", form.productName);
+    formData.append("price", form.price);
+    formData.append("description", form.description);
+    formData.append("image", form.image);
+
+    const url = `${API_URL}/api/products`;
+    const result = await axios.post(url, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    });
+
+    setError("Product added successfully");
+    fetchProducts();
+    resetForm();
+  } catch (err) {
+    console.log(err);
+    setError("Something went wrong");
+  }
+};
 
   const handleEdit = (product) => {
     setEditId(product._id);
@@ -113,7 +127,7 @@ export default function Products() {
       productName: "",
       description: "",
       price: "",
-      imgUrl: "",
+      imgUrl: null,
     });
   };
   return (
@@ -147,11 +161,10 @@ export default function Products() {
             required
           />
           <input
-            name="imgUrl"
-            value={form.imgUrl}
-            type="text"
-            placeholder="Image Url"
-            onChange={handleChange}
+            name="image"
+            type="file"
+            accept="image/*"
+            onChange={(e)=> setForm({...form, image: e.target.files[0]})}
             required
           />
 
